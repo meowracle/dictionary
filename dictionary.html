@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+Moi nhap vao 1 tu tieng Anh: <input type="text" id="eng"><br/>
+Nghia tieng Viet la: <p id="vie"></p>
+<button onclick="trans()">Click to translate</button>
+<script>
+    function trans() {
+    var english=["dog","cat","elephant","cow","pig"];
+    var vietnamese=["cho","meo","voi","bo","lon"];
+    var word=document.getElementById("eng").value;
+    var result
+        if (english.valueOf(word) == -1) {
+            result="khong tim thay tu nay";
+        } else {
+            result = vietnamese[english.indexOf(word)];
+        }
+/*       alert(result);*/
+        document.getElementById("vie").innerHTML=result;
+    }
+</script>
+</body>
+</html>
